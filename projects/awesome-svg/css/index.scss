@@ -1,0 +1,18 @@
+body,
+html {
+  height: 100vh;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  svg {
+    width: 200px;
+  }
+}

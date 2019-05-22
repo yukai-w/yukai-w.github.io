@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>svg</title>
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
+  <script src="./js/TweenMax.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <svg viewBox="0 0 440.985 1079.962" preserveAspectRatio="xMidYMid slice">
+      <path id="start" d="M0,0H420.817C528.812,603.44,32.133,493.485,440.985,1079.962H0Z" fill="#69f9ff" />
+    </svg>
+  </div>
+
+
+
+  <script>
+    const tl = new TimelineMax();
+
+    tl.from('path#start', 1.5, {
+      x: '-100%',
+      ease: Expo.easeInOut
+    });
+
+    tl.to('path#start', 2, {
+      attr: {
+        d: 'M0,0H420.817C97.876,638.009,598.852,415.432,440.985,1079.962H0Z',
+        d: 'M0,0H420.817c.5,1076.91-2.3,380.083,0,1079.962H0Z'
+      },
+      ease: Elastic.easeOut
+    }, '-=1')
+
+  </script>
+
+</body>
+
+</html>
